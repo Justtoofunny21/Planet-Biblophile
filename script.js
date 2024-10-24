@@ -1,11 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() { 
     const bookList = document.querySelector('#book-list');
     const bookDetails = document.querySelector('#book-details');
     const searchInput = document.querySelector('#search-input');
     const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
+    // Check if elements exist
+    if (!bookList || !bookDetails || !searchInput || !darkModeToggle) {
+        console.error("Some required elements are missing in the DOM.");
+        return;  // Exit if any elements are missing
+    }
+
     const books = [
-        { id: 1, title: "Wuthering heights", author: "Abu JUstice", description: "Ask morayo.", cover: "just.jpg" },
+        { id: 1, title: "Wuthering heights", author: "Abu Justice", description: "Ask morayo.", cover: "just.jpg" },
         { id: 2, title: "Skally my friend", author: "Anonymous", description: "Romantic novel of manners.", cover: "just1.jpg" },
         { id: 3, title: "Justice for Sam", author: "Neferopitou", description: "A novel on racial injustice.", cover: "just12.jpg" },
         { id: 4, title: "The Great Gatsby", author: "F. Scott Fitzgerald", description: "Tragic story of Jay Gatsby.", cover: "yes34.jpg" }
@@ -48,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         darkModeToggle.textContent = modeText;
     }
 
+    // Event listeners
     bookList.addEventListener('click', function(event) {
         if (event.target.classList.contains('book-item')) {
             displayBookDetails(event.target.dataset.id);
@@ -60,5 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     darkModeToggle.addEventListener('click', toggleDarkMode);
 
-    displayBooks(books);  // Initial list of books
+    // Initial list of books
+    displayBooks(books);
 });
