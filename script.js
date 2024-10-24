@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
     const books = [
-        { id: 1, title: "1984", author: "George Orwell", description: "Dystopian novel set in Airstrip One.", cover: "1984.jpg" },
-        { id: 2, title: "Pride and Prejudice", author: "Jane Austen", description: "Romantic novel of manners.", cover: "pride-and-prejudice.jpg" },
-        { id: 3, title: "To Kill a Mockingbird", author: "Harper Lee", description: "A novel on racial injustice.", cover: "to-kill-a-mockingbird.jpg" },
-        { id: 4, title: "The Great Gatsby", author: "F. Scott Fitzgerald", description: "Tragic story of Jay Gatsby.", cover: "gatsby.jpg" }
+        { id: 1, title: "Wuthering heights", author: "Abu JUstice", description: "Ask morayo.", cover: "just.jpg" },
+        { id: 2, title: "Skally my friend", author: "Anonymous", description: "Romantic novel of manners.", cover: "just1.jpg" },
+        { id: 3, title: "Justice for Sam", author: "Neferopitou", description: "A novel on racial injustice.", cover: "just12.jpg" },
+        { id: 4, title: "The Great Gatsby", author: "F. Scott Fitzgerald", description: "Tragic story of Jay Gatsby.", cover: "yes34.jpg" }
     ];
 
     function displayBooks(bookArray) {
